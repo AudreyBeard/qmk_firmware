@@ -26,6 +26,8 @@ $(info QMK Firmware $(QMK_VERSION))
 endif
 endif
 
+UNICODE_ENABLE = yes
+
 ON_ERROR := error_occurred=1
 
 BREAK_ON_ERRORS = no
