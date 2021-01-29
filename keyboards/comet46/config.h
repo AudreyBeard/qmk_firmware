@@ -27,7 +27,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    SatT
 #define PRODUCT         Comet46
-#define DESCRIPTION     qmk keyboard firmware for Comet46
 
 /* key matrix size */
 #define MATRIX_ROWS 5
@@ -40,12 +39,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define BACKLIGHT_LEVELS 3
 
 #define ONESHOT_TIMEOUT 500
-
-
-/* key combination for command */
-#define IS_COMMAND() ( \
-    keyboard_report->mods == (MOD_BIT(KC_LSHIFT) | MOD_BIT(KC_RSHIFT)) \
-)
 
 /*
  * Feature disable options
@@ -64,6 +57,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_ONESHOT
 //#define NO_ACTION_MACRO
 //#define NO_ACTION_FUNCTION
+
+// Define masks for modifiers
+#define MODS_SHIFT_MASK  (MOD_BIT(KC_LSHIFT)|MOD_BIT(KC_RSHIFT))
+#define MODS_CTRL_MASK  (MOD_BIT(KC_LCTL)|MOD_BIT(KC_RCTRL))
+#define MODS_ALT_MASK  (MOD_BIT(KC_LALT)|MOD_BIT(KC_RALT))
+#define MODS_GUI_MASK  (MOD_BIT(KC_LGUI)|MOD_BIT(KC_RGUI))
 
 //UART settings for communication with the RF microcontroller
 #define SERIAL_UART_BAUD 1000000
