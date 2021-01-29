@@ -27,7 +27,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DEVICE_VER      0x0002
 #define MANUFACTURER    Broekhuijsen
 #define PRODUCT         Dichotomy
-#define DESCRIPTION     q.m.k. keyboard firmware for Dichotomy
 
 /* key matrix size */
 #define MATRIX_ROWS 5
@@ -40,12 +39,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define BACKLIGHT_LEVELS 3
 
 #define ONESHOT_TIMEOUT 500
-
-
-/* key combination for command */
-#define IS_COMMAND() ( \
-    keyboard_report->mods == (MOD_BIT(KC_LSHIFT) | MOD_BIT(KC_RSHIFT)) \
-)
 
 /*
  * Feature disable options
